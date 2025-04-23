@@ -1,1 +1,54 @@
-/* This file is intentionally left blank. */
+/* Fade in animation for sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Stagger the animations for different sections */
+#who-i-am { animation-delay: 0.2s; }
+#skills { animation-delay: 0.4s; }
+#current-project { animation-delay: 0.6s; }
+#interests { animation-delay: 0.8s; }
+#contact { animation-delay: 1s; }
+
+/* Smooth hover transitions */
+.skill-category,
+.project-card,
+.interests-list li,
+.contact-link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle pulse animation for contact links */
+@keyframes subtle-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.contact-link:hover {
+    animation: subtle-pulse 1s infinite;
+}
+
+/* Gradient background animation for intro section */
+.intro {
+    background: linear-gradient(120deg, #f6f8fa, #ffffff, #f6f8fa);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

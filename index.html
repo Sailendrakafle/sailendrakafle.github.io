@@ -3,47 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Sailendra Kafle - IT Support & Cybersecurity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <header>
-        <h1>Sailendra Kafle</h1>
-        <p>Welcome to my personal portfolio!</p>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I have experience in:</p>
-        <ul>
-            <li>Python, C++, HTML, CSS, PHP</li>
-            <li>Server hardware deployment</li>
-            <li>Network & Cyber Security</li>
-            <li>Kali Linux, Ubuntu Server, Docker</li>
-        </ul>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Currently working on: Building a Security Operations Center (SOC) for home users.</p>
-    </section>
-    
-    <section id="interests">
-        <h2>Interests</h2>
-        <p>Technology, cybersecurity, home lab setups.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Placeholder for contact info or social links.</p>
-    </section>
-    
+    <main class="container">
+        <header class="intro">
+            <h1>Sailendra Kafle</h1>
+            <p class="headline">IT Support Specialist | Cybersecurity Enthusiast | Home Lab Builder</p>
+            <p class="welcome">
+                Welcome! I'm passionate about building secure and efficient IT systems. 
+                Through hands-on projects and continuous learning, I explore the fascinating 
+                world of cybersecurity and help others understand technology better.
+            </p>
+        </header>
+
+        <section id="who-i-am" class="section">
+            <h2>Who I Am</h2>
+            <p>
+                I thrive on solving technical challenges and helping systems run smoothly. 
+                My journey in IT support has given me deep insights into system administration, 
+                network management, and security implementation. I'm particularly excited about 
+                cybersecurity and spend my free time building and testing security solutions in 
+                my home lab.
+            </p>
+            <p>
+                Working with technologies like Kali Linux, Ubuntu Server, and Docker keeps me 
+                at the forefront of modern IT infrastructure. I believe in practical, hands-on 
+                learning and sharing knowledge with the tech community.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>What I Know</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>HTML/CSS</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Enterprise Systems</h3>
+                    <ul>
+                        <li>Microsoft 365</li>
+                        <li>Intune</li>
+                        <li>Azure</li>
+                        <li>Active Directory</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li>TCP/IP</li>
+                        <li>DNS</li>
+                        <li>DHCP</li>
+                        <li>Network Security</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Containers</h3>
+                    <ul>
+                        <li>Azure</li>
+                        <li>AWS Basics</li>
+                        <li>Docker</li>
+                        <li>Linux Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="current-project" class="section">
+            <h2>Current Project</h2>
+            <div class="project-card">
+                <h3>Home Security Operations Center</h3>
+                <p>
+                    I'm building a comprehensive Security Operations Center (SOC) for home users, 
+                    focusing on practical threat detection and response. The project combines:
+                </p>
+                <ul>
+                    <li>Automated log collection and analysis</li>
+                    <li>Open-source security tools integration</li>
+                    <li>Real-time threat detection and alerting</li>
+                    <li>Custom automation scripts for incident response</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="interests" class="section">
+            <h2>My Interests</h2>
+            <div class="interests-container">
+                <p>
+                    Beyond work, I'm deeply interested in ethical hacking, building home labs, 
+                    and exploring open-source security tools. I enjoy tinkering with new technologies 
+                    and finding creative ways to enhance system security.
+                </p>
+                <ul class="interests-list">
+                    <li>Ethical Hacking</li>
+                    <li>Home Lab Setup</li>
+                    <li>Open Source Tools</li>
+                    <li>Automation</li>
+                    <li>System Architecture</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <a href="mailto:kaflesailendra@gmail.com" class="contact-link">
+                    kaflesailendra@gmail.com
+                </a>
+                <a href="#" id="phoneNumber" class="contact-link" onclick="revealPhone(event)">
+                    Click to reveal phone number
+                </a>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2025 Sailendra Kafle</p>
     </footer>
-    
     <script src="js/main.js"></script>
 </body>
 </html>
