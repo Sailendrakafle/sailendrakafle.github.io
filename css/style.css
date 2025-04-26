@@ -3,9 +3,12 @@
     --secondary-color: #00cc00;
     --bg-color: #000000;
     --text-color: #ffffff;
-    --light-gray: #1a1a1a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
     --border-radius: 8px;
-    --transition: all 0.3s ease;
+    --transition: all 0.3s ease-in-out;
+    --neon-glow: 0 0 10px rgba(0, 255, 0, 0.3),
+                 0 0 20px rgba(0, 255, 0, 0.2),
+                 0 0 30px rgba(0, 255, 0, 0.1);
 }
 
 * {
@@ -20,6 +23,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    min-height: 100vh;
 }
 
 .container {
@@ -54,22 +58,29 @@ p {
     color: var(--text-color);
 }
 
+.section, .project-card, .skill-category, .interests-container, .section-nav button {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 .section {
     margin: 4rem 0;
     padding: 2rem;
-    background: var(--light-gray);
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
 }
 
 .section:hover, 
 .project-card:hover, 
 .skill-category:hover, 
-.interests-container:hover {
-    border: 2px solid var(--primary-color);
+.interests-container:hover,
+.section-nav button:hover {
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--neon-glow);
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.1);
 }
 
 /* Intro Section */
@@ -99,7 +110,6 @@ p {
 }
 
 .skill-category {
-    background: var(--light-gray);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
@@ -124,14 +134,12 @@ p {
 
 .skill-category li::before {
     content: "•";
-    color: var(--secondary-color);
-    position: absolute;
-    left: 0;
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
 }
 
 /* Project Card */
 .project-card {
-    background: var(--light-gray);
     padding: 2rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
@@ -163,7 +171,6 @@ p {
 
 /* Interests Section */
 .interests-container {
-    background: var(--light-gray);
     padding: 2rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
@@ -207,8 +214,8 @@ p {
 }
 
 .contact-link:hover {
-    color: var(--secondary-color);
-    text-shadow: 0 0 10px var(--primary-color);
+    text-shadow: var(--neon-glow);
+    color: var(--text-color);
 }
 
 footer {
@@ -232,12 +239,10 @@ footer {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 25px;
-    background-color: var(--light-gray);
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-    transition: var(--transition);
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
