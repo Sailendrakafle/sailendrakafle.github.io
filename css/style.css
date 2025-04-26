@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #2d3436;
-    --secondary-color: #0984e3;
-    --bg-color: #ffffff;
-    --text-color: #2d3436;
-    --light-gray: #f5f6fa;
+    --primary-color: #00ff00;
+    --secondary-color: #00cc00;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --light-gray: #1a1a1a;
     --border-radius: 8px;
     --transition: all 0.3s ease;
 }
@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: var(--transition);
 }
 
 body {
@@ -28,7 +29,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
@@ -56,9 +57,19 @@ p {
 .section {
     margin: 4rem 0;
     padding: 2rem;
-    background: var(--bg-color);
+    background: var(--light-gray);
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.section:hover, 
+.project-card:hover, 
+.skill-category:hover, 
+.interests-container:hover {
+    border: 2px solid var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.1);
 }
 
 /* Intro Section */
@@ -92,6 +103,7 @@ p {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    border: 2px solid transparent;
 }
 
 .skill-category:hover {
@@ -123,6 +135,7 @@ p {
     padding: 2rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    border: 2px solid transparent;
 }
 
 .project-card:hover {
@@ -153,6 +166,8 @@ p {
     background: var(--light-gray);
     padding: 2rem;
     border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 2px solid transparent;
 }
 
 .interests-list {
@@ -185,14 +200,15 @@ p {
 }
 
 .contact-link {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-decoration: none;
     transition: var(--transition);
     font-size: 1.1rem;
 }
 
 .contact-link:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
 footer {
@@ -216,22 +232,22 @@ footer {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 25px;
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--light-gray);
+    color: var(--text-color);
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
+    border: 2px solid transparent;
 }
 
 .section-nav button:hover {
-    background-color: #34495e;
+    background-color: var(--bg-color);
+    border: 2px solid var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    box-shadow: 0 0 15px #2c3e50,
-                0 0 30px rgba(44, 62, 80, 0.6);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }
 
 .section-nav button::before {
