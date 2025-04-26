@@ -23,51 +23,8 @@
     animation: neonPulse 2s infinite;
 }
 
-/* Gradient background animation for intro section */
-.intro {
-    background: linear-gradient(120deg, rgba(0, 255, 0, 0.05), rgba(0, 0, 0, 0.8), rgba(0, 255, 0, 0.05));
-    background-size: 200% 200%;
-    animation: gradientMove 15s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Glow animation for hover effects */
-@keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(0, 255, 0, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.4); }
-    100% { box-shadow: 0 0 5px rgba(0, 255, 0, 0.2); }
-}
-
-/* Glass shimmer effect */
-@keyframes shimmer {
-    0% { background-position: -100% 0; }
-    100% { background-position: 200% 0; }
-}
-
+/* Keep only basic transitions, remove all background animations */
 .section, .project-card, .skill-category, .interests-container {
     position: relative;
     overflow: hidden;
-}
-
-.section::before, .project-card::before, .skill-category::before, .interests-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.05),
-        transparent
-    );
-    background-size: 200% 100%;
-    animation: shimmer 3s infinite linear;
-    pointer-events: none;
 }
