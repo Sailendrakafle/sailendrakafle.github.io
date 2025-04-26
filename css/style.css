@@ -222,12 +222,34 @@ footer {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .section-nav button:hover {
     background-color: #34495e;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px #2c3e50,
+                0 0 30px rgba(44, 62, 80, 0.6);
+}
+
+.section-nav button::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.section-nav button:hover::before {
+    opacity: 1;
+    animation: glow 1.5s infinite;
 }
 
 /* Responsive Design */
