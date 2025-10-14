@@ -93,6 +93,13 @@ p {
     margin: 1rem 0;
 }
 
+.location-contact {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin: 0.5rem 0;
+}
+
 .welcome {
     max-width: 800px;
     margin: 2rem auto;
